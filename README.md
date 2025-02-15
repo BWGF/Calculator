@@ -49,12 +49,14 @@ basicFunc.py
 
 Пример использования: 
 
+```python
 from basicFunc import add, divide, percentage
 
 print(add(2, 3))  # 5
 print(divide(10, 2))  # 5
 print(percentage(100, 50))  # 50
 print(percentage(100))  # 1
+```
  
 complexFunc.py 
 Функции: 
@@ -71,6 +73,7 @@ complexFunc.py
 
 Пример использования:  
  
+```python
 from complexFunc import logarithm, factorial, root, tangent, cotangent
 
 print(logarithm(10, 10))  # 1
@@ -78,6 +81,7 @@ print(factorial(5))  # 120
 print(root(16, 2))  # 4
 print(tangent(math.pi / 4))  # 1
 print(cotangent(math.pi / 4))  # 1
+```
  
 converter.py 
 Функции: 
@@ -88,15 +92,18 @@ converter.py
 
 Пример использования: 
  
+```python
 from converter import convert_time, convert_currency
 
 print(convert_time(60, "минуты", "часы"))  # 1.0
 print(convert_currency(100, "рубль", "доллар"))  # 1.3
+```
  
 Интерфейс приложения 
 
-Приложение имеет графический интерфейс, построенный на библиотеке tkinter. Интерфейс разделен на три вкладки:
-Базовые операции : 
+Приложение имеет графический интерфейс, построенный на библиотеке tkinter. Интерфейс разделен на три вкладки: 
+
+    Базовые операции : 
         Поддерживает арифметические операции (+, -, *, /) и расчет процентов.
         Пользователь выбирает операцию из выпадающего списка и вводит числа.
          
@@ -152,14 +159,17 @@ print(convert_currency(100, "рубль", "доллар"))  # 1.3
 Примеры тестов: 
 
 Тесты для basicFunc: 
+```python
 def test_add(self):
     self.assertEqual(add(2, 3), 5)
 
 def test_divide(self):
     with self.assertRaises(ZeroDivisionError):
         divide(5, 0)
+```
  
 Тесты для complexFunc: 
+```python
 def test_logarithm(self):
     self.assertEqual(logarithm(10, 10), 1)
 
@@ -167,14 +177,17 @@ def test_cotangent(self):
     self.assertAlmostEqual(cotangent(math.pi / 4), 1)
     with self.assertRaises(ValueError):
         cotangent(math.pi)
+```
  
 Тесты для converter: 
+```python
 def test_convert_time(self):
     self.assertEqual(convert_time(60, "минуты", "часы"), 1)
 
 def test_convert_currency(self):
     self.assertAlmostEqual(convert_currency(100, "рубль", "доллар"), 1.3)
+```
     
 Завершение 
 
-Этот калькулятор предоставляет широкий спектр функций для выполнения как простых, так и сложных математических операций, а также конвертацию времени и валют. Он легко расширяемый и хорошо протестирован, что обеспечивает его надежность и удобство использования.
+Этот калькулятор предоставляет широкий спектр функций для выполнения как простых, так и сложных математических операций, а также конвертацию времени и валют. Он легко расширяемый и хорошо протестирован, что обеспечивает его надежность и удобство использования. 
