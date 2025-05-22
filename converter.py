@@ -1,3 +1,12 @@
+def convert_length(value, from_unit, to_unit):
+    units = {
+        "мм": 1,
+        "см": 10,
+        "м": 1000,
+        "км": 1000000,
+    }
+    return value * units[from_unit] / units[to_unit]
+
 def convert_time(value, unit_from, unit_to):
     units = {
         "секунды": 1,
